@@ -1,0 +1,162 @@
+body
+  background: $bg-color
+  color: $text-color
+  font:
+    family: $fonts
+    size: 16px
+    weight: 300
+
+
+strong, .current, a
+  font-weight: 400
+
+h2, h3, h4, h5, h6
+  margin: .75em 0
+
+h2
+  color: $main-color
+  font-weight: 700
+
+article h2, h2 a
+  margin: .25em 0
+  color: $main-color
+  font-weight: 700
+
+  &.underlined, a:hover &
+    text-decoration: underline
+
+a
+  color: $link-color
+  text-decoration: none
+
+  &:hover, &:focus
+    text-decoration: underline
+
+  .container > aside &
+    color: $link-color
+
+.text-muted
+  color: $muted-color
+
+blockquote
+  position: relative
+  margin-left: 0
+  padding: 0.25em 0 .25em 1em
+  border-left: $blokcquote-border
+  @media (min-width: $vsize-sm)
+    padding: 0.25em 0 .25em 3em
+
+
+  &::before
+    @media (min-width: $vsize-sm)
+      position: absolute
+      top: 4px
+      left: 4px
+      font-family: "Merriweather", serif
+      font-size: 68px
+      content: "”"
+      opacity: .2
+
+
+ul.link-list
+  margin: 0
+  padding-left: 6px
+
+  & > li
+    position: relative
+    padding-left: 6px
+    list-style: none
+
+    &::before
+      display: inline-block
+      position: absolute
+      top: 50%
+      left: -6px
+      width: 4px
+      height: 4px
+      margin-top: -2px
+      border-radius: 50%
+      background: $link-color
+      content: ""
+
+nav#menu
+  & > ul > li > a
+    text-transform: uppercase
+
+  a
+    text-decoration: none
+
+  ul.submenu
+    font-size: 16px
+    text-align: left
+
+  li a
+    color: $main-color
+    font:
+      weight: 400
+      size: 16px
+
+
+header#banner
+  h1, cite, address, a
+    color: $banner-text
+    font-size: 18px
+    text-shadow: $banner-text-shadow
+
+  h1
+    color: $banner-text
+    font-family: "Merriweather", serif
+    font-size: 56px
+    text-align: center
+
+    span
+      display: block
+
+  cite
+    font-family: "Merriweather", serif
+
+  address
+    font-style: normal
+    text-align: right
+
+main
+  article
+    p
+      // margin: 8px 0
+      line-height: 1.5
+
+    p, a, li
+      overflow-wrap: break-word
+
+    img
+      max-width: 100%
+      height: auto
+
+    header
+      small
+        color: $muted-color
+        font-size: 14px
+
+
+  nav li
+    font-weight: 400
+
+
+aside
+  & > section
+    margin-bottom: 24px
+
+  .timetable
+    strong
+      display: block
+      margin-bottom: 4px
+
+    p
+      margin: 0
+
+      time:last-of-type::after
+        content: "\00a0"
+
+footer
+  .fa-heart
+    color: $heart-color

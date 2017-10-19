@@ -1,0 +1,137 @@
+@import abstracts/variables
+
+header#banner
+  -ms-behavior: url("/lo19waw/templates/lo19waw/css/backgroundsize.min.htc")
+
+  h1
+    top: 16px
+    right: 16px
+    left: auto
+    transform: none
+    color: #0b5493
+    font-weight: bold
+
+.container
+  width: 1276px
+
+  .row
+    & > main
+      width: 836px
+      float: left
+
+      article header small > *
+        &:before
+          content: " / "
+
+        &:first-child:before
+          content: ""
+
+    & > aside
+      width: 344px
+      float: left
+
+    &:after
+      display: table
+      clear: both
+      content: " "
+
+nav#menu
+  border-bottom: 1px solid #ccc
+
+  .hamburger-cont
+    display: none
+
+  & > ul
+    position: initial
+    top: 0
+    width: auto
+    max-width: none
+    margin-right: 24px
+    box-shadow: none
+    overflow: visible
+
+    & > li
+      display: inline-block
+      width: auto
+      height: 52px
+      float: left
+      border: 0
+      background: none
+
+      &:hover, &.hover
+        overflow: visible
+
+        span
+          border-bottom-color: $main-color
+
+        ul.submenu
+          position: absolute
+          top: 52px
+          max-height: none
+          border: 1px solid #ccc
+          border-top: 0
+          visibility: visible
+
+          li
+            display: block
+            min-height: 0
+            white-space: nowrap
+
+            &:hover, &:focus
+              a
+                background: #e6e6e6
+
+            a
+              display: block
+              padding: 0 12px
+              line-height: 36px
+
+      &:first-child
+        width: 138px
+
+      &:first-child + li
+        width: 86px
+
+      &:first-child + li + li
+        width: 93px
+
+      &:first-child + li + li + li
+        width: 100px
+
+      &:first-child + li + li + li + li
+        width: 114px
+
+      &:first-child + li + li + li + li + li
+        width: 130px
+
+      &:first-child + li + li + li + li + li + li
+        width: 100px
+
+      &:first-child + li + li + li + li + li + li + li
+        width: 158px
+
+      a
+        width: auto
+        height: 52px
+        padding: 0 12px
+
+.gallery-all .row > main section h2, .gallery-all .row > main section h2 a, .gallery .row > main section h2, .gallery .row > main section h2 a
+  font-size: 24px
+
+footer
+  address, .logo, .copy
+    display: inline-block
+    width: 33%
+    // float: left
+
+  .logo
+    position: relative
+    height: 100px
+
+    img
+      position: absolute
+      left: 50%
+      margin-left: -42px
+
+  .copy p
+    text-align: right

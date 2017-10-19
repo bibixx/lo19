@@ -1,0 +1,13 @@
+.article-id-4 table td:first-child, .article-id-19 table td:first-child p {
+  white-space: nowrap;
+}
+
+.article-id-11 table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+.article-id-11 td {
+  width: 25%;
+  vertical-align: baseline;
+}

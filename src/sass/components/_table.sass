@@ -1,0 +1,33 @@
+.container > .row > main article
+  .table-responsive-container
+    max-width: 100%
+    overflow-x: auto
+
+  table
+    border-collapse: separate
+    border-spacing: 0
+
+    &.organization
+      td:first-child
+        white-space: nowrap
+
+    tr.header, th
+      &:hover td
+        background: none
+
+      td
+        font-weight: 400
+
+    tr
+      &:nth-child(2n)
+        background: $table-color-2n
+
+      &:hover td
+        background: $table-color-hover
+
+      &:last-child td
+        border-bottom: 0
+
+      td
+        padding: 8px
+        border-bottom: $table-border

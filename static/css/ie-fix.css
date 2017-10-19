@@ -1,0 +1,105 @@
+header#banner {
+  -ms-behavior: url("/lo19waw/templates/lo19waw/css/backgroundsize.min.htc"); }
+  header#banner h1 {
+    top: 16px;
+    right: 16px;
+    left: auto;
+    transform: none;
+    color: #0b5493;
+    font-weight: bold; }
+
+.container {
+  width: 1276px; }
+  .container .row > main {
+    width: 836px;
+    float: left; }
+    .container .row > main article header small > *:before {
+      content: " / "; }
+    .container .row > main article header small > *:first-child:before {
+      content: ""; }
+  .container .row > aside {
+    width: 344px;
+    float: left; }
+  .container .row:after {
+    display: table;
+    clear: both;
+    content: " "; }
+
+nav#menu {
+  border-bottom: 1px solid #ccc; }
+  nav#menu .hamburger-cont {
+    display: none; }
+  nav#menu > ul {
+    position: initial;
+    top: 0;
+    width: auto;
+    max-width: none;
+    margin-right: 24px;
+    box-shadow: none;
+    overflow: visible; }
+    nav#menu > ul > li {
+      display: inline-block;
+      width: auto;
+      height: 52px;
+      float: left;
+      border: 0;
+      background: none; }
+      nav#menu > ul > li:hover, nav#menu > ul > li.hover {
+        overflow: visible; }
+        nav#menu > ul > li:hover span, nav#menu > ul > li.hover span {
+          border-bottom-color: #0b5493; }
+        nav#menu > ul > li:hover ul.submenu, nav#menu > ul > li.hover ul.submenu {
+          position: absolute;
+          top: 52px;
+          max-height: none;
+          border: 1px solid #ccc;
+          border-top: 0;
+          visibility: visible; }
+          nav#menu > ul > li:hover ul.submenu li, nav#menu > ul > li.hover ul.submenu li {
+            display: block;
+            min-height: 0;
+            white-space: nowrap; }
+            nav#menu > ul > li:hover ul.submenu li:hover a, nav#menu > ul > li:hover ul.submenu li:focus a, nav#menu > ul > li.hover ul.submenu li:hover a, nav#menu > ul > li.hover ul.submenu li:focus a {
+              background: #e6e6e6; }
+            nav#menu > ul > li:hover ul.submenu li a, nav#menu > ul > li.hover ul.submenu li a {
+              display: block;
+              padding: 0 12px;
+              line-height: 36px; }
+      nav#menu > ul > li:first-child {
+        width: 138px; }
+      nav#menu > ul > li:first-child + li {
+        width: 86px; }
+      nav#menu > ul > li:first-child + li + li {
+        width: 93px; }
+      nav#menu > ul > li:first-child + li + li + li {
+        width: 100px; }
+      nav#menu > ul > li:first-child + li + li + li + li {
+        width: 114px; }
+      nav#menu > ul > li:first-child + li + li + li + li + li {
+        width: 130px; }
+      nav#menu > ul > li:first-child + li + li + li + li + li + li {
+        width: 100px; }
+      nav#menu > ul > li:first-child + li + li + li + li + li + li + li {
+        width: 158px; }
+      nav#menu > ul > li a {
+        width: auto;
+        height: 52px;
+        padding: 0 12px; }
+
+.gallery-all .row > main section h2, .gallery-all .row > main section h2 a, .gallery .row > main section h2, .gallery .row > main section h2 a {
+  font-size: 24px; }
+
+footer address, footer .logo, footer .copy {
+  display: inline-block;
+  width: 33%; }
+
+footer .logo {
+  position: relative;
+  height: 100px; }
+  footer .logo img {
+    position: absolute;
+    left: 50%;
+    margin-left: -42px; }
+
+footer .copy p {
+  text-align: right; }

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
+<extension version="3.0" type="template" client="site">
+  <name>lo19waw</name>
+  <version>1.0</version>
+  <creationDate>05/08/2016</creationDate>
+  <author>Bartosz Legięć</author>
+  <authorEmail>bartosz@legiec.eu</authorEmail>
+  <copyright>Copyright © 2016 Bartosz Legięć</copyright>
+  <description>Motyw stworzony dla XIX LO im. Powstańców Warszawy w Warszawie</description>
+  <files>
+    <filename>index.php</filename>
+    <folder>css</folder>
+    <folder>js</folder>
+    <folder>images</folder>
+    <folder>html</folder>
+  </files>
+  <positions>
+    <position>menu</position>
+    <position>banner</position>
+    <position>sidebar</position>
+    <position>footer</position>
+    <position>breadcrumbs</position>
+  </positions>
+  <config>
+  </config>
+</extension>

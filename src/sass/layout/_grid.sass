@@ -1,0 +1,54 @@
+.container
+  display: block
+  margin: 0 auto
+  box-sizing: border-box
+
+  @media (min-width: $vsize-mb)
+    width: 750px
+
+  @media (min-width: $vsize-sm)
+    width: 970px
+
+  @media (min-width: $vsize-md)
+    width: 1170px
+
+  @media (min-width: $vsize-lg)
+    width: 1370px
+
+
+  .row
+    &::before
+      display: table
+      content: " "
+
+    &::after
+      display: table
+      clear: both
+      content: " "
+
+    & > main
+      width: 100%
+      padding: 0 24px
+      float: none
+      box-sizing: border-box
+
+      @media (min-width: $vsize-sm)
+        width: 626px
+        float: left
+
+      @media (min-width: $vsize-md)
+        width: 826px
+
+      @media (min-width: $vsize-lg)
+        width: 1026px
+
+
+    & > aside
+      width: 100%
+      padding: 0 24px
+      float: none
+      box-sizing: border-box
+
+      @media (min-width: $vsize-sm)
+        width: 344px
+        float: left

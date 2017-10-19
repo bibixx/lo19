@@ -1,0 +1,75 @@
+.offline
+  &, body
+    height: 100%
+
+  body
+    display: flex
+    flex-direction: column
+
+    .container
+      flex: 1
+      padding-top: 64px
+      text-align: center
+
+      main
+        margin: 0 auto
+        float: none
+
+    footer
+      flex-shrink: 0
+
+  h1
+    font-weight: 400
+
+  form
+    width: 200px
+    margin: 0 auto
+    margin-top: 32px
+
+    input[type="text"], input[type="password"], label
+      width: 100%
+
+    input[type="text"], input[type="password"]
+      width: 200px
+      padding: 8px
+      border: $input-border
+      border-radius: 2px
+      background: $input-color
+      font-family: $fonts
+
+    label
+      display: inline-block
+      padding-bottom: 4px
+      text-align: left
+
+    input[type="submit"]
+      height: 32px
+      padding: 0 16px
+      border: 0
+      border-radius: 2px
+      background: $link-color
+      color: $button-color
+      font-family: $fonts
+      font-size: 13px
+      text-transform: uppercase
+      cursor: pointer
+
+    #submit-button
+      text-align: left
+
+.error
+  .container
+    display: flex
+    align-items: center
+    justify-content: center
+
+@media (max-width: $vsize-mb)
+  .offline body footer
+    .copy
+      display: none
+
+    address
+      display: block
+
+      p
+        text-align: center
