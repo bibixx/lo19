@@ -49,6 +49,8 @@ function getCookie( name ) {
 $( document ).ready( () => {
   let sum = $( "nav#menu ul.nav.menu" ).css( "margin-right" ).replace( "px", "" ) * 1;
 
+  $( "nav#menu.loading" ).removeClass( "loading" );
+
   $( "nav#menu ul.nav.menu > li" ).each( function () {
     sum += $( this ).outerWidth( true );
   } );
