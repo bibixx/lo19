@@ -5,4 +5,4 @@
 3. Wpisz `npm install`
 
 ## Użycie
-1. Aby zacząć kompilować SASS i JS, a zarazem włączyć serwer 
+Aby skompilować JS i SASS wpisz `npm run build`, a następnie skopiuj zawartość folderu `/dist` do `/templates/lo19waw`
