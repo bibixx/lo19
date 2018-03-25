@@ -4,6 +4,8 @@ img.logo
   margin: 8px 16px
   float: left
 
+nav .tab-hidden
+  line-height: 52px
 
 nav#menu
   position: fixed
@@ -20,7 +22,7 @@ nav#menu
   //   & > ul, & > a
   //     visibility: hidden
 
-  &:hover
+  &:hover, &:focus
     max-height: 300px
     visibility: visible
 
@@ -194,7 +196,7 @@ nav#menu:not(.mobile-menu)
       border: 0
       background: none
 
-      &:hover
+      &:hover, &:focus
         overflow: visible
 
         & > ul

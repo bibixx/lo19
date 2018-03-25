@@ -4,7 +4,7 @@
   "scripts": {
     "start": "webpack-dev-server --config ./build/webpack.dev.js",
     "clean": "rimraf dist",
-    "build": "npm run clean && NODE_ENV=production webpack --config ./build/webpack.prod.js -p --progress"
+    "build": "NODE_ENV=production webpack --config ./build/webpack.prod.js -p --progress"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.3",

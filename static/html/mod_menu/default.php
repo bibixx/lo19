@@ -18,6 +18,7 @@ if (($tagId = $params->get('tag_id', '')))
 
 // The menu class is deprecated. Use nav instead
 ?>
+
 <ul class="nav menu<?php echo $class_sfx; ?>"<?php echo $id; ?>>
 <?php foreach ($list as $i => &$item)
 {
@@ -36,9 +37,10 @@ if (($tagId = $params->get('tag_id', '')))
 	$class .= $item->anchor_css;
 
 	if( $class !== "" ){
-		echo '<li class="' . $class . '">';
+		// echo "<li>" . json_encode($item) . "</li>";
+		echo '<li tabindex="0" href="#" class="' . $class . '">';
 	} else {
-		echo '<li>';
+		echo '<li tabindex="0" href="#">';
 	}
 
 	switch ($item->type) :

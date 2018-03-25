@@ -44,4 +44,6 @@ elseif ($item->browserNav == 2)
 	$attributes['onclick'] = "window.open(this.href, 'targetWindow', '" . $options . "'); return false;";
 }
 
+$attributes["tabindex"] = 0;
+
 echo JHtml::_('link', JFilterOutput::ampReplace(htmlspecialchars($item->flink, ENT_COMPAT, 'UTF-8')), '<span>'. $linktype. '</span><i class="fa fa-caret-down" aria-hidden="true"></i>', $attributes);
