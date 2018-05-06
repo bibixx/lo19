@@ -13,8 +13,8 @@ module.exports = {
     ],
 
     output: {
-      // path: path.join( __dirname, "../dist" ),
-      path: "/Applications/MAMP/htdocs/templates/lo19waw",
+      path: path.join( __dirname, "../dist/lo19.pl/templates/lo19waw" ),
+      // path: "/Applications/MAMP/htdocs/templates/lo19waw",
       filename: "./js/script.js",
     },
 

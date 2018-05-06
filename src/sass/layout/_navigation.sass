@@ -7,7 +7,22 @@ img.logo
 nav .tab-hidden
   line-height: 52px
 
-nav#menu
+
+
+
+img.logo
+  display: inline-block
+  height: 100px
+  margin: 8px 16px
+  float: left
+
+nav .tab-hidden
+  line-height: 52px
+
+
+
+
+#menu
   position: fixed
   top: 0
   left: 0
@@ -16,110 +31,58 @@ nav#menu
   background: $menu-color
   box-shadow: $menu-shadow
   z-index: 10
+  padding-right: 24px
+  box-sizing: border-box
 
-  &.loading
-    display: flex
-  //   & > ul, & > a
-  //     visibility: hidden
-
-  &:hover, &:focus
-    max-height: 300px
-    visibility: visible
-
-  input#toggle-menu
+#menu.mobile-menu
+  .menu
     display: none
-
-  input:checked ~ ul
-    max-height: calc(100vh - 52px)
-    border-bottom: $menu-ul-border
-
-  & > ul
-    display: inline-block
     position: absolute
     top: 52px
-    right: 0
+    margin: 0
+    padding: 0
     width: 100%
-    max-height: 0
-    margin: 0
-    padding: 0
-    float: right
-    transition: max-height .2s ease-in-out
-    box-shadow: $menu-ul-shadow
+    max-height: calc(100vh - 52px)
     overflow: auto
-
-    & > li
-      display: block
-      position: relative
-      width: 100%
-      height: 100%
-      border-top: $menu-ul-border
-      background: $menu-color
-      overflow: hidden
-      list-style-type: none
-      box-sizing: border-box
-
-      &.current-page span
-        border-bottom-color: $main-color
-
-      & > a
-        display: inline-block
-        width: 100%
-        height: 100%
-        padding: 0 32px
-        line-height: 52px
-        box-sizing: border-box
-
-        .fa-caret-down
-          display: inline-block
-          margin-left: 3px
-
-        span
-          transition: border-bottom .2s ease-in-out
-          border-bottom: 2px solid transparent
-
-      &.open
-        overflow: visible
-
-        .fa-caret-down::before
-          content: "\f0d8"
-
-        & > ul
-          max-height: 750px
-          transition: max-height .2s ease-in-out, visibility 0s 0s
-          visibility: visible
-
-  ul.submenu
-    min-width: 100%
-    max-height: 0
-    margin: 0
-    padding: 0
-    transition: max-height .1s ease-in-out, visibility 0s .1s
-    border-top: $menu-sub-ul-border
-    background: $menu-color
-    box-shadow: $menu-sub-ul-shadow
-    overflow: hidden
-    visibility: hidden
+    list-style: none
+    box-shadow: $menu-ul-shadow
+    
+    a
+      line-height: 52px
+      padding: 0 32px
 
     li
-      display: table
+      background: $bg-color
       width: 100%
-      min-height: 52px
-      line-height: 2.25em
-      list-style-type: none
 
-      a
-        display: table-cell
-        width: 100%
-        height: 100%
-        padding: 0 56px
-        transition: background .15s ease-in-out
+      &::before
         border-top: $menu-sub-li-border
-        vertical-align: middle
-        box-sizing: border-box
+        content: ""
+        display: block
+        position: absolute
+        width: 100vw
+        left: 0
 
-        &:hover, &:focus
-          outline: 0
-          background: $menu-sub-hover-color
+    .fa
+      display: inline-block
+      margin-left: 5px
+
+  .submenu
+    list-style: none
+    margin: 0
+    padding: 0 32px
+    display: none
+
+    & > li
+      box-sizing: border-box
+      width: 100%
+
+  li.open
+    & > a .fa
+      transform: rotate(180deg)
+
+    & > .submenu
+      display: block
 
   .hamburger-cont
     float: right
@@ -145,7 +108,6 @@ nav#menu
         height: 4px
         transform-origin: center
         transition: top .1s ease-in-out .14s, bottom .1s ease-in-out .14s, margin-top .1s ease-in-out .14s, margin-bottom .1s ease-in-out .14s, transform .1s ease-in-out, opacity .1s ease-in-out
-
         border-radius: 4px
         background: $text-color
         content: ""
@@ -160,81 +122,117 @@ nav#menu
         top: 50%
         margin-top: -2px
 
-  input:checked ~  .hamburger-cont .hamburger
-    &::before, &::after, & .middle-bar
-      transition: top .1s ease-in-out, bottom .1s ease-in-out, margin-top .1s ease-in-out, margin-bottom .1s ease-in-out, transform .1s ease-in-out .14s, opacity .1s ease-in-out .14s
+  #toggle-menu
+    visibility: hidden
 
-    &::before
-      top: 50%
-      margin-top: -2px
-      transform: rotate(45deg)
+    &:checked
+      & ~ .hamburger-cont .hamburger
+        &::before, &::after, & .middle-bar
+          transition: top .1s ease-in-out, bottom .1s ease-in-out, margin-top .1s ease-in-out, margin-bottom .1s ease-in-out, transform .1s ease-in-out .14s, opacity .1s ease-in-out .14s
 
-    &::after
-      bottom: 50%
-      margin-bottom: -2px
-      transform: rotate(-45deg)
+        &::before
+          top: 50%
+          margin-top: -2px
+          transform: rotate(45deg)
 
-    .middle-bar
-      opacity: 0
+        &::after
+          bottom: 50%
+          margin-bottom: -2px
+          transform: rotate(-45deg)
+
+        .middle-bar
+          opacity: 0
+
+      & ~ .menu
+        display: block
 
 
 
-nav#menu:not(.mobile-menu)
-  & > ul
-    position: initial
-    top: 0
-    width: auto
-    max-height: none
-    margin-right: 24px
-    box-shadow: none
-    overflow: visible
+#menu:not(.mobile-menu)
+  #toggle-menu, .hamburger-cont
+    display: none
+  
+  .menu
+    display: flex
+    justify-content: flex-end
+    margin: 0
+    padding: 0
+    height: 100%
+
+    a
+      color: #0b5493
+      font-weight: 400
+      font-size: 16px
+      display: flex
+      align-items: center
+      justify-content: space-between
 
     & > li
-      display: inline-block
-      width: auto
-      float: left
-      border: 0
-      background: none
-
-      &:hover, &:focus
-        overflow: visible
-
-        & > ul
-          max-height: 300px
-          visibility: visible
+      display: inline-flex
+      align-items: center
+      position: relative
+      height: 100%
 
       & > a
-        width: auto
+        text-transform: uppercase
         padding: 0 12px
 
-        &:hover span, &:focus span
-          border-bottom-color: $main-color
-
-        .fa-caret-down
+        .fa
           display: none
-          margin: 0
 
-  .my-profile ul.submenu
-    right: 0
-    left: auto
+        span
+          transition: border-bottom .2s ease-in-out
+          border-bottom: 2px solid transparent
+          white-space: nowrap
 
-  ul.submenu
+      & > .submenu
+        border-top: 1px solid #ccc
+
+      &:hover, &:focus-within
+        span
+          border-bottom-color: #0b5493
+
+        & > .submenu
+          display: block
+
+  .submenu
+    display: none
+    margin: 0
+    padding: 0
     position: absolute
-    top: 100%
-    left: 0
-    height: auto
-    transition: max-height .2s ease-in-out
+    top: 52px
+    background: #fff
+    box-shadow: $menu-ul-shadow
+    width: 300px
+    transition: max-height .1s ease-in-out, visibility 0s .1s
+    border-radius: 0 0 3px 3px
 
-    li
+    & > li
+      list-style: none
       display: block
-      min-height: initial
-      white-space: nowrap
+      line-height: 2.25em
+      position: relative
 
       a
-        display: block
-        padding: 0 12px
+        padding: 6px 12px
         border: 0
-        line-height: 36px
+        line-height: 1.5em
+        transition: background .15s ease-in-out
 
-  .hamburger-cont
-    display: none
+        .fa
+          transform: rotate(-90deg)
+
+      & > .submenu
+        top: 0
+        left: 0
+        transform: translateX(100%)
+        border-radius: 0 3px 3px 3px
+
+
+      &:hover, &:focus-within
+        & > .submenu
+          display: block
+
+        & > a
+          background: rgba(0,0,0,0.1)
+

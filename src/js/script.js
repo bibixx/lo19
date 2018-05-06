@@ -75,7 +75,7 @@ $( document ).ready( () => {
     } );
   }
 
-  $( ".nav > li" ).on( "click", function ( e ) {
+  $( ".nav li" ).on( "click", function ( e ) {
     if ( $( document ).width() <= 991 ) {
       $( this ).siblings( "li" ).removeClass( "open" );
       if ( $( this ).children( ".submenu" ).length > 0 && !$( this ).hasClass( "open" ) ) {
