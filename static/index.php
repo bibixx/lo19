@@ -12,7 +12,7 @@
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="pl-pl">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <jdoc:include type="head" />
@@ -33,6 +33,7 @@
   <body <?php if ($pageclass != '') echo 'class="'.htmlspecialchars($pageclass).'"';?>>
     <nav id="menu" class="loading">
       <a href="#content" class="tab-hidden">Przejdź do zawartości strony</a>
+      <a href="#aside" class="tab-hidden">Przejdź do panelu bocznego</a>
       <a href=".">
         <img alt="XIX LO im. Powstańców Warszawy" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/images/page-content/logo-shadow.png" class="logo">
       </a>
@@ -49,7 +50,7 @@
     <jdoc:include type="modules" name="banner" />
 
     <div class="container">
-      <div class="row" id="content">
+      <div class="row">
 
         <jdoc:include type="message" />
 
@@ -57,7 +58,7 @@
 
         <jdoc:include type="component" />
 
-        <aside>
+        <aside id="aside">
 
           <jdoc:include type="modules" name="sidebar" />
 

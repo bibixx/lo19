@@ -1,6 +1,6 @@
 <?php defined('_JEXEC') or die('Direct Access to this location is not allowed.'); ?>
 
-<main>
+<main id="content">
 <?php
 echo $this->loadTemplate('header');
 

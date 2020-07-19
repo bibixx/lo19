@@ -20,7 +20,7 @@ $user    = JFactory::getUser();
 $info    = $params->get('info_block_position', 0);
 // JHtml::_('behavior.caption');
 ?>
-<main class="item-page<?php echo $this->pageclass_sfx; ?>" itemscope itemtype="https://schema.org/Article">
+<main id="content" class="item-page<?php echo $this->pageclass_sfx; ?>" itemscope itemtype="https://schema.org/Article">
 	<meta itemprop="inLanguage" content="<?php echo ($this->item->language === '*') ? JFactory::getConfig()->get('language') : $this->item->language; ?>" />
 
 	<?php
@@ -64,7 +64,7 @@ $info    = $params->get('info_block_position', 0);
 					<?php echo $this->escape($this->item->title); ?>
 				</h2>
 			<?php endif; ?>
-			
+
 			<?php if (isset($images->image_fulltext) && !empty($images->image_fulltext)) : ?>
 			<div class="intro-image">
 				<div class="con" style="background-image: url('<?php echo htmlspecialchars($images->image_fulltext); ?>')"></div>

@@ -12,7 +12,7 @@ defined('_JEXEC') or die;
 JHtml::addIncludePath(JPATH_COMPONENT . '/helpers');
 
 ?>
-<main itemscope itemtype="https://schema.org/Blog" class="blog-<?php echo $this->pageclass_sfx; ?>">
+<main id="content" itemscope itemtype="https://schema.org/Blog" class="blog-<?php echo $this->pageclass_sfx; ?>">
 		<?php if ($this->params->get('show_description') && $this->category->description) : ?>
 			<article>
 				<main>

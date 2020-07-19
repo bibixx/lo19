@@ -23,7 +23,7 @@ $this->direction = $doc->direction;
 ?>
 
 <!DOCTYPE html>
-<html class="offline error">
+<html class="offline error" lang="pl-pl">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 

@@ -20,7 +20,7 @@
     <?php echo JText::_('COM_JOOMGALLERY_COMMON_CATEGORIES'); ?>
   </div>
   <?php endif; ?>
-  <main>
+  <main id="content">
     <?php
       $this->i  = 0;
       $num_rows = ceil(count($this->rows ) / $this->_config->get('jg_colcat'));

@@ -12,7 +12,7 @@
 ?>
 
 <!DOCTYPE html>
-<html class="offline">
+<html class="offline" lang="pl-pl">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
