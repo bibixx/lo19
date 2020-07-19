@@ -62,11 +62,11 @@ $( document ).ready( () => {
   } );
 
   if ( !getCookie( "cookieApproved" ) ) {
-    const cookieText = "<i class=\"fa fa-times\"></i><p>Ta strona używa plików cookie w celu usprawnienia i ułatwienia dostępu do serwisu oraz prowadzenia danych statystycznych. Dalsze korzystanie z tej witryny oznacza akceptację tego stanu rzeczy. Możesz samodzielnie decydować o tym czy, jakie i przez jakie witryny pliki cookie mogą być zamieszczana na Twoim urządzeniu. Przeczytaj: <a href=\"http://jakwylaczyccookie.pl\" target=\"_blank\">jak wyłączyć pliki cookie</a>. Szczgółowe informacje na temat wykorzystania plików cookie znajdziesz w <a href=\"/polityka-cookies\">Polityce Cookie</a>.</p>";
+    const cookieText = "<button class=\"close-btn\"><i class=\"fa fa-times\"></i></button><p>Ta strona używa plików cookie w celu usprawnienia i ułatwienia dostępu do serwisu oraz prowadzenia danych statystycznych. Dalsze korzystanie z tej witryny oznacza akceptację tego stanu rzeczy. Możesz samodzielnie decydować o tym czy, jakie i przez jakie witryny pliki cookie mogą być zamieszczana na Twoim urządzeniu. Przeczytaj: <a href=\"http://jakwylaczyccookie.pl\" target=\"_blank\">jak wyłączyć pliki cookie</a>. Szczgółowe informacje na temat wykorzystania plików cookie znajdziesz w <a href=\"/polityka-cookies\">Polityce Cookie</a>.</p>";
     const $cookieNotice = $( "<div></div>" ).addClass( "cookie-notice" ).html( cookieText );
-    $( "body > footer" ).after( $cookieNotice );
+    $( "body > nav" ).after( $cookieNotice );
 
-    $cookieNotice.children( ".fa" ).click( () => {
+    $cookieNotice.children( ".close-btn" ).click( () => {
       $cookieNotice.addClass( "closed" );
       const date = new Date();
       date.setDate( date.getDate() + 3650 );
