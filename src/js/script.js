@@ -100,12 +100,5 @@ $( document ).ready( () => {
   $( ".slideshow li:first-child" ).addClass( "current" );
   $( ".slideshow li:last-child" ).addClass( "last" );
 
-  let schoolEmail = "lo19☺edu♥um♥warszawa♥pl";
-
-  schoolEmail = schoolEmail.replace( /♥/g, "." );
-  schoolEmail = schoolEmail.replace( /☺/g, "@" );
-
-  $( ".school-email" ).text( schoolEmail ).attr( "href", `mailto:${schoolEmail}` );
-
   setInterval( step, slideshowDuration );
 } );
