@@ -23,5 +23,5 @@ defined('_JEXEC') or die('Restricted access');
 	<address>ul. Zbaraska 1<br>
 04-014 Warszawa<br>
 tel./fax: (22) 810 38 29<br>
-	<a class="school-email" href="mailto:lo19@edu.um.warszawa.pl">lo19@edu.um.warszawa.pl</a></address>
+	<a class="school-email" href="mailto:lo19@eduwarszawa.pl">lo19@eduwarszawa.pl</a></address>
 </header>
